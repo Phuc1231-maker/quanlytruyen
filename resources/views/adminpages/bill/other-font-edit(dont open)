@@ -1,0 +1,38 @@
+<thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">id_customer</th>
+                            <th scope="col">date_order</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">DEL</th>                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($bills as $item)
+                        <tr>
+                            <td>{{$item->id}}</td> 
+                            <td>{{$item->id_customer}}</td>
+                            <td>{{$item->date_order}}</td>
+                            <td>{{$item->total }}</td>
+                           
+                             <td><img src="/source/image/product/{{$item->image }}" alt="{{$item->image }}" height="150" ></td> 
+                            <td>
+                                <a href="{{route('admin.getCateEdit',['id'=> $item->id ])}}" class="btn btn-success" >
+                                    <i class="fas fa-edit"></i>
+                                   </a>
+                            </td>
+                            <td><form action="{{route('admin.getBillDelete',['id'=> $item->id ])}}" onclick="return confirm('bạn có muốn xóa {{$item->name}}');" method="post">
+                     
+                                @csrf
+                                @method('DELETE')
+                                 <a type="submit" class="btn btn-danger" value="Xóa">  
+                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> </button>
+                              </form> </td>
+                        </tr>
+                         <hr> 
+                        @endforeach
+                        
+                       
+                       
+                    </tbody>

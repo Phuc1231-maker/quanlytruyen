@@ -1,0 +1,75 @@
+/* body {
+    background-color: #f8f9fa;
+} */
+
+/* main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.addproduct {
+    margin-inline-start: 30em;
+}
+
+h1 {
+    color: #ff5733; /* Màu cam đậm cho tiêu đề */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+textarea,
+input[type="file"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffa500; /* Màu cam đậm cho viền input */
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #ff5733; /* Màu cam cho viền input khi focus */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Màu xanh dương cho nút */
+    border-color: #007bff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    color: #fff; /* Màu trắng cho chữ trên nút */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Màu xanh dương đậm khi hover */
+    border-color: #0056b3;
+}
+
+.alert {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da; /* Màu đỏ nhạt cho thông báo lỗi */
+    border-color: #f5c6cb;
+}
